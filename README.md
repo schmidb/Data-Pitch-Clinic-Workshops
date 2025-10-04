@@ -17,6 +17,6 @@ Interactive presentation slides for Data Pitch Clinic workshops.
 ## Author
 
 **Markus Schmidberger**  
-Data Leadership Coach specializing in bridging the gap between data teams and business stakeholders. As CTO of [JuntoAI](https://juntoai.org), he leads the development of next-generation business networks powered by AI.
+Data Leadership Coach specializing in bridging the gap between data teams and business stakeholders. As CTO of [JuntoAI](https://juntoai.org){:target="_blank"}, he leads the development of next-generation business networks powered by AI.
 
-[LinkedIn Profile](https://www.linkedin.com/in/schmidberger/)
+[LinkedIn Profile](https://www.linkedin.com/in/schmidberger/){:target="_blank"}
