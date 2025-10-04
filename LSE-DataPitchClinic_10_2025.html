@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSE Data Analytics Career Accelerator | Data Pitch Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lse-red {
+            color: #E4002B;
+        }
+        .lse-gray {
+            color: #4A4A4A;
+        }
+        .lse-bg-gray {
+            background-color: #F8F8F8;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .fade-in-up-delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .fade-in-up-delay-2 { animation-delay: 0.4s; opacity: 0; }
+        .fade-in-up-delay-3 { animation-delay: 0.6s; opacity: 0; }
+        .fade-in-up-delay-4 { animation-delay: 0.8s; opacity: 0; }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen w-screen p-4 md:p-8">
+
+    <!-- Main Slide Container -->
+    <div id="slide-container" class="w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden relative flex flex-col">
+        <!-- Slide 1: Title -->
+        <div class="slide active h-full w-full flex-col justify-center items-center text-center p-8 md:p-16 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/003248/FFFFFF?text=&font=inter');">
+            <div class="absolute inset-0 bg-slate-900 opacity-60"></div>
+            <div class="relative z-10 text-white">
+                <h3 class="text-xl md:text-2xl font-semibold tracking-wider fade-in-up">LSE DATA ANALYTICS CAREER ACCELERATOR</h3>
+                <h1 class="text-5xl md:text-7xl font-black mt-4 mb-6 leading-tight fade-in-up fade-in-up-delay-1">Data Pitch Clinic:<br/>From Data to Impact</h1>
+                <p class="text-lg md:text-xl font-medium fade-in-up fade-in-up-delay-2">Andreas Schmidberger</p>
+                <p class="text-md md:text-lg text-gray-300 fade-in-up fade-in-up-delay-3">Data Leadership Coach | October 2025</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Welcome & Goal -->
+        <div class="slide h-full w-full flex items-center justify-center p-8 md:p-16 lse-bg-gray">
+            <div class="w-full max-w-5xl flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold lse-gray fade-in-up">Welcome, Future Data Leaders! <span class="text-4xl">🎯</span></h2>
+                    <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up fade-in-up-delay-1">
+                        Today is all about **you**. In the next 45 minutes, we have one clear goal:
+                    </p>
+                    <div class="mt-8 p-6 bg-white rounded-lg shadow-md border-l-4 border-red-500 fade-in-up fade-in-up-delay-2">
+                        <p class="text-xl font-semibold text-gray-800">
+                           To help you <span class="text-red-600">confidently and effectively</span> pitch your data skills and career story in any professional setting.
+                        </p>
+                    </div>
+                     <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up fade-in-up-delay-3">
+                        We'll move from listing skills to telling a compelling story that connects your abilities to **real business value**.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 flex items-center justify-center fade-in-up fade-in-up-delay-4">
+                    <img src="https://placehold.co/500x500/E4002B/FFFFFF?text=LSE&font=inter" alt="LSE Logo Placeholder" class="rounded-full shadow-xl">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Why Your Data Story Matters -->
+        <div class="slide h-full w-full flex-col justify-center items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center lse-gray mb-12 fade-in-up">Why Your 'Data Story' Matters</h2>
+            <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+                <div class="w-full md:w-1/3 p-6 fade-in-up fade-in-up-delay-1">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">The Company's Need</h3>
+                    <p class="text-gray-600 text-lg">Companies don't hire for technical skills alone. They hire for <span class="font-bold">problem-solvers.</span></p>
+                </div>
+                <div class="w-24 text-6xl text-red-500 fade-in-up fade-in-up-delay-2 hidden md:block">&rarr;</div>
+                <div class="w-full md:w-1/3 p-6 bg-red-50 rounded-lg border-2 border-red-200 fade-in-up fade-in-up-delay-2">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4">The Data-Business Gap</h3>
+                    <p class="text-red-900 text-lg">Many businesses struggle to see how data activities translate into tangible outcomes (revenue, cost savings, etc.).</p>
+                </div>
+                <div class="w-24 text-6xl text-red-500 fade-in-up fade-in-up-delay-3 hidden md:block">&rarr;</div>
+                <div class="w-full md:w-1/3 p-6 bg-green-50 rounded-lg border-2 border-green-200 fade-in-up fade-in-up-delay-3">
+                    <h3 class="text-2xl font-bold text-green-700 mb-4">Your Solution: The Pitch</h3>
+                    <p class="text-green-900 text-lg">A powerful pitch <span class="font-bold">bridges this gap</span> by framing your skills as a means to create business impact.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-xl font-semibold text-gray-700 fade-in-up fade-in-up-delay-4">This is how you stand out.</div>
+        </div>
+
+        <!-- Slide 4: The 3-Part Pitch Framework -->
+        <div class="slide h-full w-full flex-col justify-center items-center p-8 md:p-16 lse-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center lse-gray mb-12 fade-in-up">The 3-Part Pitch Framework</h2>
+            <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Part 1: Context -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 fade-in-up fade-in-up-delay-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-red-500 mr-4">1</span>
+                        <h3 class="text-2xl font-bold text-gray-800">The Context (The "Before")</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Briefly state your background or the business problem.</p>
+                    <p class="italic text-gray-500 p-4 bg-gray-50 rounded-md">"In my previous role at a retail company, we struggled with understanding customer churn..."</p>
+                </div>
+                <!-- Part 2: Action -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 fade-in-up fade-in-up-delay-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-red-500 mr-4">2</span>
+                        <h3 class="text-2xl font-bold text-gray-800">The Action (Your Part)</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Describe what **you** did. Mention 1-2 key data skills/tools.</p>
+                    <p class="italic text-gray-500 p-4 bg-gray-50 rounded-md">"...so I used Python to analyze transaction data and built a predictive model to identify at-risk customers."</p>
+                </div>
+                <!-- Part 3: Impact -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 fade-in-up fade-in-up-delay-3 border-t-8 border-red-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-red-500 mr-4">3</span>
+                        <h3 class="text-2xl font-bold text-gray-800">The Impact (The "So What?")</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 font-semibold">This is crucial! Quantify the result. How did you help the business?</p>
+                    <p class="italic text-gray-500 p-4 bg-gray-50 rounded-md">"...This reduced churn by 15% in Q1, saving an estimated £200,000."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Let's Practice -->
+        <div class="slide h-full w-full flex-col justify-center items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center lse-gray mb-2 fade-in-up">Let's Practice: The Pitch Clinic</h2>
+            <p class="text-2xl text-red-600 font-semibold mb-12 fade-in-up fade-in-up-delay-1">(30 Minutes)</p>
+            <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-50 rounded-lg fade-in-up fade-in-up-delay-2">
+                    <div class="text-5xl mb-4">✍️</div>
+                    <h3 class="text-2xl font-bold text-gray-800">Step 1: Prepare (5 mins)</h3>
+                    <p class="mt-2 text-gray-600">Use the 3-Part Framework to structure a 90-second pitch.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg fade-in-up fade-in-up-delay-3">
+                    <div class="text-5xl mb-4">🎤</div>
+                    <h3 class="text-2xl font-bold text-gray-800">Step 2: Pitch & Feedback (20 mins)</h3>
+                    <p class="mt-2 text-gray-600">Deliver your pitch in small groups and provide constructive feedback.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg fade-in-up fade-in-up-delay-4">
+                    <div class="text-5xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold text-gray-800">Step 3: Group Debrief (5 mins)</h3>
+                    <p class="mt-2 text-gray-600">We'll come back together to share key learnings.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Key Takeaways -->
+        <div class="slide h-full w-full flex items-center justify-center p-8 md:p-16 lse-bg-gray">
+             <div class="w-full max-w-4xl text-left">
+                <h2 class="text-4xl md:text-5xl font-bold lse-gray mb-12 fade-in-up">Key Takeaways & Confidence Boosters</h2>
+                <ul class="space-y-6 text-xl text-gray-700">
+                    <li class="flex items-start fade-in-up fade-in-up-delay-1">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Lead with Impact:</strong> Always connect your work back to a business outcome (Revenue, Cost, etc.).</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-2">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Quantify Everything:</strong> Use numbers, percentages, and monetary values. They make your contribution undeniable.</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-3">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Know Your Audience:</strong> Tailor your pitch. A technical manager wants model details; a business leader wants the bottom line.</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-4">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Practice Makes Perfect:</strong> Your pitch is a living story. Refine it continuously. Confidence comes from preparation.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7: Q&A and Thank You -->
+        <div class="slide h-full w-full flex-col justify-center items-center text-center p-8 md:p-16 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/003248/FFFFFF?text=&font=inter');">
+            <div class="absolute inset-0 bg-slate-900 opacity-60"></div>
+            <div class="relative z-10 text-white">
+                <h2 class="text-6xl md:text-8xl font-black fade-in-up">Questions?</h2>
+                <p class="text-xl md:text-2xl mt-8 mb-10 fade-in-up fade-in-up-delay-1">Thank you for your active participation!</p>
+                <div class="fade-in-up fade-in-up-delay-2">
+                    <a href="https://www.linkedin.com/in/schmidberger/" target="_blank" class="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition-colors">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+                <p class="mt-10 text-lg text-gray-300 max-w-3xl mx-auto fade-in-up fade-in-up-delay-3">
+                   You are not just data analysts; you are the bridge to smarter business decisions. Good luck!
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation and Footer -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-white/50 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="text-sm text-gray-600">LSE Data Analytics Career Accelerator | Data Pitch Clinic</div>
+                <div class="flex items-center gap-4">
+                    <button id="prevBtn" class="p-2 rounded-full bg-gray-600 text-white hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <div id="slide-counter" class="text-sm font-medium text-gray-700">1 / 7</div>
+                    <button id="nextBtn" class="p-2 rounded-full bg-gray-600 text-white hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                // Remove active class from all slides
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                
+                // Add active class to the current slide
+                slides[index].classList.add('active');
+                
+                // Trigger animations
+                const animatedElements = slides[index].querySelectorAll('.fade-in-up');
+                animatedElements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; /* trigger reflow */
+                    el.style.animation = '';
+                });
+
+                // Update counter and button states
+                slideCounter.textContent = `${index + 1} / ${totalSlides}`;
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+
+            // Event Listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Initialize
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>
