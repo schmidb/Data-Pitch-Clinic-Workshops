@@ -4,19 +4,15 @@ Interactive presentation slides for Data Pitch Clinic workshops.
 
 ## Workshops
 
-**LSE Data Analytics Career Accelerator | Data Pitch Clinic**
+**[LSE Data Analytics Career Accelerator | Data Pitch Clinic](LSE-DataPitchClinic_10_2025.html)**
 - 45-minute small-group workshop with a data career expert
 - Practice sharing your career story or pitching your data skillset in an interview-style format
 - Get feedback on how to showcase your new capabilities with confidence
 
-**CAM PACE Data Science Career Accelerator | Executive Data Pitch Clinic**
+**[CAM PACE Data Science Career Accelerator | Executive Data Pitch Clinic](CAM-ExecutiveDataPitchClinic_10_2025.html)**
 - 45-minute small-group workshop with a senior data leadership coach
 - Perfect your AI or data project pitch, learn how to win buy-in from executives
 - Practice delivering with clarity and impact
-
-## Files
-
-- `LSE-DataPitchClinic_10_2025.html` - LSE workshop presentation slides
 
 ## Author
 
