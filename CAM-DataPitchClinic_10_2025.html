@@ -5,14 +5,555 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAM PACE Executive Data Pitch Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .cam-blue {
+            color: #003C71;
+        }
+        .cam-gray {
+            color: #4A4A4A;
+        }
+        .cam-bg-gray {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .modern-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .fade-in-up-delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .fade-in-up-delay-2 { animation-delay: 0.4s; opacity: 0; }
+        .fade-in-up-delay-3 { animation-delay: 0.6s; opacity: 0; }
+        .fade-in-up-delay-4 { animation-delay: 0.8s; opacity: 0; }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">CAM PACE Data Science Career Accelerator</h1>
-            <h2 class="text-2xl text-blue-600 mb-8">Executive Data Pitch Clinic</h2>
-            <p class="text-gray-600 text-lg">Presentation slides coming soon...</p>
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen w-screen p-4 md:p-8">
+
+    <div id="slide-container" class="w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden relative">
+        <!-- Slide 1: Title -->
+        <div class="slide active h-full w-full flex flex-col justify-center items-center text-center p-8 md:p-16 modern-gradient">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+            <div class="relative z-10 text-white">
+                <h3 class="text-xl md:text-2xl font-semibold tracking-wider fade-in-up">CAM PACE DATA SCIENCE CAREER ACCELERATOR</h3>
+                <h1 class="text-5xl md:text-7xl font-black mt-4 mb-6 leading-tight fade-in-up fade-in-up-delay-1">Executive Data Pitch Clinic</h1>
+                <p class="text-lg md:text-xl font-medium fade-in-up fade-in-up-delay-2">Dr. Markus Schmidberger</p>
+                <p class="text-md md:text-lg text-gray-300 fade-in-up fade-in-up-delay-3">Data Leadership Coach & CTO at JuntoAI</p>
+                <p class="text-md md:text-lg text-gray-300 fade-in-up fade-in-up-delay-3">October 2025</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Welcome & Goal -->
+        <div class="slide h-full w-full flex items-start justify-center p-8 md:p-16 cam-bg-gray">
+            <div class="w-full max-w-5xl flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold cam-gray fade-in-up">Welcome! 🎯</h2>
+                    <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up fade-in-up-delay-1">
+                        Welcome to this 45-minute workshop with a senior data leadership coach. Our goal:
+                    </p>
+                    <div class="mt-8 p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-600 fade-in-up fade-in-up-delay-2">
+                        <p class="text-xl font-semibold text-gray-800">
+                            Perfect your AI or data project pitch, learn how to <span class="text-blue-600">win buy-in from executives</span>, and practice delivering with clarity and impact.
+                        </p>
+                    </div>
+                     <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up fade-in-up-delay-3">
+                        We'll transform technical project descriptions into compelling executive pitches that drive <strong>decision-making and funding</strong>.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 flex items-center justify-center fade-in-up fade-in-up-delay-4">
+                    <svg viewBox="0 0 400 400" class="w-full max-w-md">
+                        <!-- From center Data to all -->
+                        <line x1="200" y1="200" x2="200" y2="80" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="200" x2="320" y2="140" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="200" x2="320" y2="260" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="200" x2="200" y2="320" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="200" x2="80" y2="260" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="200" x2="80" y2="140" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+                        <!-- Outer ring connections -->
+                        <line x1="200" y1="80" x2="320" y2="140" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <line x1="320" y1="140" x2="320" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <line x1="320" y1="260" x2="200" y2="320" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <line x1="200" y1="320" x2="80" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <line x1="80" y1="260" x2="80" y2="140" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <line x1="80" y1="140" x2="200" y2="80" stroke="#94a3b8" stroke-width="1" opacity="0.25"/>
+                        <!-- Cross connections -->
+                        <line x1="200" y1="80" x2="320" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <line x1="320" y1="140" x2="80" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <line x1="320" y1="140" x2="200" y2="320" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="80" x2="80" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <line x1="80" y1="140" x2="320" y2="260" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <line x1="80" y1="140" x2="200" y2="320" stroke="#94a3b8" stroke-width="1" opacity="0.2"/>
+                        <circle cx="200" cy="200" r="45" fill="#003C71" opacity="0.95"/>
+                        <text x="200" y="205" text-anchor="middle" fill="white" font-size="18" font-weight="bold">DATA</text>
+                        <circle cx="200" cy="80" r="35" fill="#667eea" opacity="0.95"/>
+                        <text x="200" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI</text>
+                        <circle cx="320" cy="140" r="35" fill="#06b6d4" opacity="0.95"/>
+                        <text x="320" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="600">Projects</text>
+                        <circle cx="320" cy="260" r="35" fill="#10b981" opacity="0.95"/>
+                        <text x="320" y="265" text-anchor="middle" fill="white" font-size="12" font-weight="600">Business</text>
+                        <circle cx="200" cy="320" r="35" fill="#f59e0b" opacity="0.95"/>
+                        <text x="200" y="318" text-anchor="middle" fill="white" font-size="11" font-weight="600">Execu-</text>
+                        <text x="200" y="332" text-anchor="middle" fill="white" font-size="11" font-weight="600">tives</text>
+                        <circle cx="80" cy="260" r="35" fill="#8b5cf6" opacity="0.95"/>
+                        <text x="80" y="265" text-anchor="middle" fill="white" font-size="13" font-weight="600">Impact</text>
+                        <circle cx="80" cy="140" r="35" fill="#ec4899" opacity="0.95"/>
+                        <text x="80" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="600">Strategy</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Dr. Markus Schmidberger Introduction -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center lse-gray mb-12 fade-in-up">Dr. Markus Schmidberger</h2>
+            <div class="max-w-4xl w-full space-y-6">
+                <div class="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg border-l-4 border-red-500 fade-in-up fade-in-up-delay-1">
+                    <p class="text-lg text-gray-700">I was the first one to run R on a supercomputer and analyzed Novartis cancer data for thousands of people.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg border-l-4 border-red-500 fade-in-up fade-in-up-delay-2">
+                    <p class="text-lg text-gray-700">At Amazon, I helped companies migrate their data from on-premise to the cloud.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg border-l-4 border-red-500 fade-in-up fade-in-up-delay-3">
+                    <p class="text-lg text-gray-700">With glomex, I built the first real-time Lambda Architecture and won the Gartner Best Practice Award.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-4">
+                    <p class="text-lg text-gray-700 font-semibold">At Scout24, I led data teams that drove a data culture transformation across the organization, enabling self-service analytics that resulted in <span class="text-green-600">10 new data products launched and product managers reporting 12x faster decision-making</span>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Why Executive Buy-In Matters -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-4 fade-in-up">Why Executive Buy-In Matters</h2>
+            <p class="text-lg text-gray-600 text-center mb-8 fade-in-up fade-in-up-delay-1">The reality of data project funding</p>
+            <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg border-2 border-red-200 fade-in-up fade-in-up-delay-2">
+                    <div class="text-5xl font-black text-red-600 mb-2">70%</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Projects Fail</h3>
+                    <p class="text-sm text-gray-600">Data and AI projects fail to deliver business value due to poor executive alignment</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg border-2 border-blue-200 fade-in-up fade-in-up-delay-2">
+                    <div class="text-5xl font-black text-blue-600 mb-2">3 min</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Executive Attention</h3>
+                    <p class="text-sm text-gray-600">Average time executives give to project pitches before deciding on funding</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-2 border-green-200 fade-in-up fade-in-up-delay-3">
+                    <div class="text-5xl font-black text-green-600 mb-2">$2.5M</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Average AI Project</h3>
+                    <p class="text-sm text-gray-600">Typical investment required for enterprise AI/data initiatives</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg border-2 border-purple-200 fade-in-up fade-in-up-delay-3">
+                    <div class="text-5xl font-black text-purple-600 mb-2">5x</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">ROI Expectation</h3>
+                    <p class="text-sm text-gray-600">Minimum return on investment executives expect from data projects</p>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg fade-in-up fade-in-up-delay-4">
+                <p class="text-lg font-semibold text-gray-800">💡 The Solution: A compelling pitch that speaks the language of business strategy and ROI</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: The Data-Business Gap -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 cam-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-6 fade-in-up">The Data-Business Gap</h2>
+            <div class="max-w-5xl w-full space-y-6">
+                <div class="p-6 bg-white rounded-2xl shadow-lg border-l-4 border-blue-600 fade-in-up fade-in-up-delay-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">What is it?</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The disconnect between <strong>technical data work</strong> and <strong>business value</strong>. 
+                        Data teams speak in models, pipelines, and accuracy metrics—while executives think in revenue, costs, and strategic advantage.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 fade-in-up fade-in-up-delay-2">
+                    <div class="p-4 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-md border-2 border-red-200">
+                        <div class="text-4xl font-black text-red-600 mb-1">$3.1T</div>
+                        <p class="text-sm text-gray-700 font-semibold">Annual global loss from poor data quality</p>
+                    </div>
+                    <div class="p-4 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl shadow-md border-2 border-orange-200">
+                        <div class="text-4xl font-black text-orange-600 mb-1">70%</div>
+                        <p class="text-sm text-gray-700 font-semibold">Data projects fail to deliver business value</p>
+                    </div>
+                    <div class="p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-md border-2 border-purple-200">
+                        <div class="text-4xl font-black text-purple-600 mb-1">60%</div>
+                        <p class="text-sm text-gray-700 font-semibold">Executives don't trust their data teams</p>
+                    </div>
+                </div>
+                <div class="p-5 bg-white rounded-2xl shadow-lg fade-in-up fade-in-up-delay-3">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Where does it come from?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 text-sm">
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-2 text-lg font-bold">•</span>
+                            <div><strong>Different languages:</strong> Data teams use technical jargon while executives speak ROI and strategy</div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-2 text-lg font-bold">•</span>
+                            <div><strong>Siloed teams:</strong> Data scientists work isolated from business strategy</div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-2 text-lg font-bold">•</span>
+                            <div><strong>Technical focus:</strong> Emphasis on model accuracy over business impact</div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-2 text-lg font-bold">•</span>
+                            <div><strong>Misaligned metrics:</strong> Success measured in technical terms, not business outcomes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Real Example - AutoScout24 -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-2 fade-in-up">📱 Real Example: AutoScout24 Chat Function</h2>
+            <p class="text-sm text-gray-600 text-center mb-6 fade-in-up fade-in-up-delay-1">LLM trained in <strong>2019</strong> - pitching an innovative AI project to executives</p>
+            <div class="max-w-6xl w-full flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-3/5 space-y-4 fade-in-up fade-in-up-delay-1">
+                    <div class="bg-gray-50 p-3 rounded-xl shadow-lg">
+                        <img src="img/as24_original.png" alt="AutoScout24 Original" class="w-full rounded-lg shadow-md">
+                        <p class="text-xs text-gray-600 text-center mt-2 font-semibold">What the customer has seen</p>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl shadow-lg border-2 border-blue-300">
+                        <img src="img/as24_with_box.png" alt="AutoScout24 with Chat" class="w-full rounded-lg shadow-md">
+                        <p class="text-xs text-blue-700 font-semibold text-center mt-2">What a much more innovative version would have been</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5 space-y-4">
+                    <div class="p-5 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl shadow-lg border-l-4 border-red-500 fade-in-up fade-in-up-delay-2">
+                        <div class="flex items-start">
+                            <span class="text-4xl mr-4">👨💻</span>
+                            <div>
+                                <h3 class="text-lg font-bold text-red-700 mb-2">Technical Pitch:</h3>
+                                <p class="text-sm text-gray-700 italic">"We built an ML-powered chat system with 92% accuracy and sub-200ms response time."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg border-l-4 border-gray-400 fade-in-up fade-in-up-delay-3">
+                        <div class="flex items-start">
+                            <span class="text-4xl mr-4">🤔</span>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-700 mb-2">What Executive Hears:</h3>
+                                <p class="text-sm text-gray-600 italic">"...technical stuff... but how does this help us sell more cars?"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-4">
+                        <div class="flex items-start">
+                            <span class="text-4xl mr-4">✅</span>
+                            <div>
+                                <h3 class="text-lg font-bold text-green-700 mb-2">Executive Pitch:</h3>
+                                <p class="text-sm text-gray-700 font-semibold">"Our AI chat increases user experience, speeds up matching by 60% and increases sales decision time by <span class="text-green-600">factor 3</span>."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: The 3-Part Executive Pitch Framework -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 cam-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-12 fade-in-up">The 3-Part Executive Pitch Framework</h2>
+            <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl card-hover fade-in-up fade-in-up-delay-1 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-blue-600 mr-4">1</span>
+                        <h3 class="text-2xl font-bold text-gray-800">Business Problem</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">State the strategic challenge or opportunity. Connect to company goals.</p>
+                    <p class="italic text-gray-500 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">"Our customer churn rate is 25%, costing us $5M annually and threatening our market position..."</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl card-hover fade-in-up fade-in-up-delay-2 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-blue-600 mr-4">2</span>
+                        <h3 class="text-2xl font-bold text-gray-800">Your Solution</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Describe your AI/data project in business terms. Keep technical details minimal.</p>
+                    <p class="italic text-gray-500 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">"...we'll build a predictive system to identify at-risk customers 60 days in advance..."</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl card-hover fade-in-up fade-in-up-delay-3 border-2 border-blue-200">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl font-black text-blue-600 mr-4">3</span>
+                        <h3 class="text-2xl font-bold text-gray-800">Business Impact</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 font-semibold">Quantify ROI, revenue impact, cost savings, or strategic advantage.</p>
+                    <p class="italic text-gray-500 p-4 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg">"...reducing churn by 40%, saving $2M annually with 6-month payback period."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Perfect Executive Pitches -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-12 fade-in-up">Perfect Executive Pitches</h2>
+            <div class="max-w-4xl w-full space-y-6">
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-1">
+                    <p class="text-lg text-gray-700 font-semibold"><span class="text-green-600">Novartis Cancer Research:</span> Pioneered parallel computing for patient data analysis, <span class="text-green-600">reducing drug discovery time by 40% and accelerating 3 clinical trials</span> to market.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-2">
+                    <p class="text-lg text-gray-700 font-semibold"><span class="text-green-600">Amazon Cloud Migration:</span> Led enterprise cloud strategies, delivering <span class="text-green-600">average cost savings of 35% and 3x faster data processing</span> for Fortune 500 clients.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-3">
+                    <p class="text-lg text-gray-700 font-semibold"><span class="text-green-600">glomex Streaming Analytics:</span> Architected real-time Lambda Architecture processing 50M+ events daily, winning <span class="text-green-600">Gartner Best Practice Award and enabling world-first in-time streaming cost predictions</span>.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-l-4 border-green-500 fade-in-up fade-in-up-delay-4">
+                    <p class="text-lg text-gray-700 font-semibold"><span class="text-green-600">Scout24 Data Culture:</span> Led data transformation enabling self-service analytics, resulting in <span class="text-green-600">10 new data products and 12x faster decision-making</span> across the organization.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Exercise 1 - Identify Business Problem -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 cam-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-2 fade-in-up">Exercise 1: Identify Your Business Problem</h2>
+            <p class="text-2xl text-blue-600 font-semibold mb-6 fade-in-up fade-in-up-delay-1">(5 Minutes)</p>
+            <div class="max-w-6xl w-full">
+                <div class="p-6 bg-white rounded-2xl shadow-lg border border-blue-100 fade-in-up fade-in-up-delay-2">
+                    <div class="text-4xl mb-3 text-center">✍️</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Frame your project as a business problem</h3>
+                    <p class="text-base text-gray-700 mb-3">Think of your AI/data project. In 2-3 sentences, describe:</p>
+                    <ul class="space-y-2 text-gray-700 ml-6 text-sm">
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>What strategic challenge or opportunity does it address?</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>What's the cost of inaction? (revenue loss, competitive risk, inefficiency)</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>How does it align with company strategy?</li>
+                    </ul>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                            <p class="text-xs font-semibold text-blue-700 mb-1">Example 1:</p>
+                            <p class="text-xs text-gray-600 italic">"Our supply chain forecasting is 30% inaccurate, causing $8M in excess inventory costs and frequent stockouts that damage customer satisfaction."</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <p class="text-xs font-semibold text-green-700 mb-1">Example 2:</p>
+                            <p class="text-xs text-gray-600 italic">"Manual fraud detection misses 40% of cases, costing us $12M annually and exposing us to regulatory risk in our expansion markets."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Exercise 2 - Complete Your Executive Pitch -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 bg-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-2 fade-in-up">Exercise 2: Complete Your Executive Pitch</h2>
+            <p class="text-2xl text-blue-600 font-semibold mb-8 fade-in-up fade-in-up-delay-1">(5 Minutes)</p>
+            <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg border border-blue-100 fade-in-up fade-in-up-delay-2">
+                    <div class="text-5xl mb-4">🔧</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Add Your Solution</h3>
+                    <p class="text-gray-700">Describe your AI/data project in business terms. Avoid technical jargon.</p>
+                    <div class="mt-4 p-3 bg-white rounded-lg text-sm text-gray-600 italic">"We'll implement an AI-powered forecasting system that learns from historical patterns and market signals..."</div>
+                </div>
+                <div class="p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg border border-green-100 fade-in-up fade-in-up-delay-3">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Quantify Business Impact</h3>
+                    <p class="text-gray-700">What's the ROI? Include payback period, revenue impact, or strategic advantage.</p>
+                    <div class="mt-4 p-3 bg-white rounded-lg text-sm text-gray-600 italic">"...reducing inventory costs by $5M annually with 8-month payback and improving customer satisfaction scores by 25%."</div>
+                </div>
+            </div>
+            <div class="mt-8 p-6 bg-yellow-50 rounded-xl shadow-md border-l-4 border-yellow-500 fade-in-up fade-in-up-delay-4">
+                <p class="text-lg text-gray-700 text-center"><strong>Share in chat:</strong> Post your complete 3-part executive pitch!</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Tailoring for Different Executives -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 cam-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-6 fade-in-up">🎯 Tailoring for Different Executives</h2>
+            <p class="text-lg text-gray-600 text-center mb-8 fade-in-up fade-in-up-delay-1">Same project, different angles</p>
+            <div class="max-w-6xl w-full space-y-4">
+                <div class="p-4 bg-white rounded-xl shadow-md border-2 border-gray-300 fade-in-up fade-in-up-delay-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">📝 Your Project:</h3>
+                    <p class="text-sm text-gray-700 italic">"AI-powered customer churn prediction system"</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg border-2 border-blue-200 fade-in-up fade-in-up-delay-2">
+                        <div class="flex items-center mb-2">
+                            <span class="text-2xl mr-2">👔</span>
+                            <h3 class="text-md font-bold text-blue-800">For the CEO</h3>
+                        </div>
+                        <p class="text-xs text-gray-700">"This AI system protects our customer base and supports our growth strategy. We'll reduce churn by 40%, protecting $2M annual revenue and strengthening our competitive position in the market."</p>
+                    </div>
+                    <div class="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg border-2 border-green-200 fade-in-up fade-in-up-delay-3">
+                        <div class="flex items-center mb-2">
+                            <span class="text-2xl mr-2">💰</span>
+                            <h3 class="text-md font-bold text-green-800">For the CFO</h3>
+                        </div>
+                        <p class="text-xs text-gray-700">"$400K implementation cost with 6-month payback. Delivers $2M annual savings from reduced churn, plus $500K from improved retention marketing efficiency. ROI of 625% in year one."</p>
+                    </div>
+                    <div class="p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg border-2 border-purple-200 fade-in-up fade-in-up-delay-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-2xl mr-2">⚙️</span>
+                            <h3 class="text-md font-bold text-purple-800">For the CTO</h3>
+                        </div>
+                        <p class="text-xs text-gray-700">"Cloud-native ML system integrating with existing CRM. Scalable architecture handles 1M+ customer profiles. 90-day implementation using proven AWS stack with minimal technical risk."</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg fade-in-up fade-in-up-delay-4">
+                    <p class="text-sm font-semibold text-gray-800">💡 <strong>Pro Tip:</strong> Research your audience. Know their priorities, KPIs, and current strategic initiatives before the pitch.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Key Takeaways -->
+        <div class="slide h-full w-full flex items-start justify-center p-8 md:p-16 bg-white">
+             <div class="w-full max-w-4xl text-left">
+                <h2 class="text-4xl md:text-5xl font-bold cam-gray mb-12 fade-in-up">Key Takeaways for Executive Pitches</h2>
+                <ul class="space-y-6 text-xl text-gray-700">
+                    <li class="flex items-start fade-in-up fade-in-up-delay-1">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Lead with Business Impact:</strong> Start with the problem and ROI, not the technology.</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-2">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Quantify Everything:</strong> Use dollars, percentages, and payback periods. Executives need numbers.</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-3">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Know Your Audience:</strong> Tailor your pitch to each executive's priorities and KPIs.</div>
+                    </li>
+                     <li class="flex items-start fade-in-up fade-in-up-delay-4">
+                        <span class="text-green-500 mr-4 mt-1">&#10003;</span>
+                        <div><strong class="text-gray-900">Keep It Simple:</strong> Avoid technical jargon. If you can't explain it simply, you don't understand it well enough.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 13: Reading Recommendations -->
+        <div class="slide h-full w-full flex flex-col justify-start items-center p-8 md:p-16 pb-24 cam-bg-gray">
+            <h2 class="text-4xl md:text-5xl font-bold text-center cam-gray mb-12 fade-in-up">Recommended Reading</h2>
+            <div class="max-w-5xl w-full space-y-6 relative z-20">
+                <div class="p-6 bg-white rounded-2xl shadow-lg border-l-4 border-blue-600 fade-in-up fade-in-up-delay-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">📚 Humanizing Data Strategy: Leading Data with the Head and the Heart <a href="https://amzn.eu/d/2t49X5Y" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors">🔗</a></h3>
+                    <p class="text-gray-600">by Tiankai Feng - Bridging the gap between technical data work and human-centered business value</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-lg border-l-4 border-green-600 fade-in-up fade-in-up-delay-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">📚 Storytelling with Data: A Data Visualization Guide for Business Professionals <a href="https://amzn.eu/d/fofW2mC" target="_blank" class="text-green-600 hover:text-green-700 transition-colors">🔗</a></h3>
+                    <p class="text-gray-600">by Cole Nussbaumer Knaflic - Making data compelling and actionable for executives</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-lg border-l-4 border-purple-600 fade-in-up fade-in-up-delay-3">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">📚 Data Science for Business <a href="https://amzn.eu/d/atmLzkq" target="_blank" class="text-purple-600 hover:text-purple-700 transition-colors">🔗</a></h3>
+                    <p class="text-gray-600">by Foster Provost & Tom Fawcett - Connecting technical skills to business value and executive decision-making</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Q&A and Thank You -->
+        <div class="slide h-full w-full flex flex-col justify-center items-center text-center p-8 md:p-16 modern-gradient">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-blue-900/30"></div>
+            <div class="relative z-10 text-white">
+                <h2 class="text-6xl md:text-8xl font-black fade-in-up">Q&A Session</h2>
+                <p class="text-2xl mt-6 mb-4 fade-in-up fade-in-up-delay-1">(15 Minutes)</p>
+                <p class="text-xl md:text-2xl mb-10 fade-in-up fade-in-up-delay-1">Thank you for your active participation!</p>
+                <div class="fade-in-up fade-in-up-delay-2">
+                    <a href="https://www.linkedin.com/in/schmidberger/" target="_blank" class="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition-colors">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+                <p class="mt-10 text-lg text-gray-300 max-w-3xl mx-auto fade-in-up fade-in-up-delay-3">
+                   Master the art of executive communication. Your technical excellence deserves to be understood and funded.
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation and Footer -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-white/50 backdrop-blur-sm pointer-events-none">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="text-sm text-gray-600 pointer-events-none">CAM PACE Data Science Career Accelerator | Executive Data Pitch Clinic | Dr. Markus Schmidberger</div>
+                <div class="flex items-center gap-4 pointer-events-auto">
+                    <button id="prevBtn" class="p-2 rounded-full bg-gray-600 text-white hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <div id="slide-counter" class="text-sm font-medium text-gray-700">1 / 14</div>
+                    <button id="nextBtn" class="p-2 rounded-full bg-gray-600 text-white hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                
+                slides[index].classList.add('active');
+                
+                const animatedElements = slides[index].querySelectorAll('.fade-in-up');
+                animatedElements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight;
+                    el.style.animation = '';
+                });
+
+                slideCounter.textContent = `${index + 1} / ${totalSlides}`;
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+
 </body>
 </html>
