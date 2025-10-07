@@ -14,7 +14,7 @@ Interactive presentation slides for Data Pitch Clinic workshops.
 - Perfect your AI or data project pitch, learn how to win buy-in from executives
 - Practice delivering with clarity and impact
 
-## Aut
+## Author
 
 **Markus Schmidberger**  
 Data Leadership Coach specializing in bridging the gap between data teams and business stakeholders. As CTO of [JuntoAI](https://juntoai.org){:target="_blank"}, he leads the development of next-generation business networks powered by AI.
