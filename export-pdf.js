@@ -33,13 +33,19 @@ async function exportToPdf(inputFile, outputFile) {
 
     const page = await browser.newPage();
 
-    // 16:9 slide dimensions at 96dpi → 1280x720px
+    // 16:9 slide dimensions — 1280x720 logical, 2x scale = 2560x1440 actual PNG
     await page.setViewport({ width: 1280, height: 720, deviceScaleFactor: 2 });
 
     await page.goto(`file://${absInput}`, { waitUntil: 'networkidle0' });
 
     // Wait for fonts and animations to settle
     await new Promise(r => setTimeout(r, 1500));
+
+    // Hide the navigation bar for clean screenshots
+    await page.evaluate(() => {
+        const nav = document.querySelector('#slide-container > div:last-child');
+        if (nav) nav.style.display = 'none';
+    });
 
     // Count total slides
     const totalSlides = await page.evaluate(() => {
@@ -79,10 +85,9 @@ async function exportToPdf(inputFile, outputFile) {
 
     console.log(`\nBuilding PDF...`);
 
-    // Use a second page to assemble all screenshots into a PDF
-    const pdfPage = await browser.newPage();
+    // Write assembly HTML to a temp file (base64 inline is too large for setContent)
+    const assemblyPath = path.join(tmpDir, '_assembly.html');
 
-    // Build an HTML page with all screenshots as pages
     const imgTags = screenshots.map(p => {
         const data = fs.readFileSync(p);
         const b64 = data.toString('base64');
@@ -100,15 +105,20 @@ async function exportToPdf(inputFile, outputFile) {
     height: 720px;
     page-break-after: always;
     overflow: hidden;
+    display: block;
   }
   .page:last-child { page-break-after: avoid; }
-  img { width: 1280px; height: 720px; display: block; }
+  img { width: 1280px; height: 720px; display: block; object-fit: cover; }
 </style>
 </head>
 <body>${imgTags}</body>
 </html>`;
 
-    await pdfPage.setContent(assemblyHtml, { waitUntil: 'networkidle0' });
+    fs.writeFileSync(assemblyPath, assemblyHtml);
+
+    const pdfPage = await browser.newPage();
+    await pdfPage.setViewport({ width: 1280, height: 720, deviceScaleFactor: 1 });
+    await pdfPage.goto(`file://${assemblyPath}`, { waitUntil: 'networkidle0', timeout: 120000 });
 
     await pdfPage.pdf({
         path: absOutput,
@@ -122,6 +132,7 @@ async function exportToPdf(inputFile, outputFile) {
 
     // Clean up temp files
     screenshots.forEach(f => fs.unlinkSync(f));
+    fs.unlinkSync(assemblyPath);
     fs.rmdirSync(tmpDir);
 
     console.log(`\nPDF saved: ${absOutput}`);
