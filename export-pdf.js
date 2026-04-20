@@ -94,9 +94,12 @@ async function exportToPdf(inputFile, outputFile) {
         return `<div class="page"><img src="data:image/png;base64,${b64}"/></div>`;
     }).join('\n');
 
+    const pdfTitle = path.basename(absOutput, '.pdf');
+
     const assemblyHtml = `<!DOCTYPE html>
 <html>
 <head>
+<title>${pdfTitle}</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: white; }
