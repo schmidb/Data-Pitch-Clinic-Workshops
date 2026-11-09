@@ -3,8 +3,8 @@
  * Usage: node export-pdf.js <input.html> [output.pdf]
  *
  * Example:
- *   node export-pdf.js CAM-DataPitchClinic_04_20_2026.html
- *   node export-pdf.js CAM-DataPitchClinic_04_20_2026.html my-deck.pdf
+ *   node export-pdf.js CAM-DataPitchClinic_11_10_2026.html
+ *   node export-pdf.js CAM-DataPitchClinic_11_10_2026.html my-deck.pdf
  */
 
 const puppeteer = require('puppeteer');

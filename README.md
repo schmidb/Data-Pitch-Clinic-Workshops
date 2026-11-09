@@ -6,6 +6,12 @@ Interactive presentation slides for Data Pitch Clinic workshops.
 
 ### CAM PACE Data Science Career Accelerator
 
+**[Executive AI & Data Pitch Clinic - November 10, 2026](CAM-DataPitchClinic_11_10_2026.html)**
+
+- 45-minute small-group workshop with a senior data leadership coach (+15 mins Q&A)
+- Perfect your AI or data project pitch, learn how to win buy-in from executives
+- Practice delivering with clarity and impact
+
 **[Executive Data Pitch Clinic - April 20, 2026](CAM-DataPitchClinic_04_20_2026.html)**
 
 - 45-minute small-group workshop with a senior data leadership coach (+15 mins Q&A)
